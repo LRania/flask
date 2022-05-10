@@ -3,7 +3,7 @@ from flask import Flask
 import shutil
 
 path = '/tmp/f.txt'
-shutil.chown(path, user=None, group=None)
+shutil.chown(path, user="2000", group="2000")
 
 app = Flask(__name__)
 
