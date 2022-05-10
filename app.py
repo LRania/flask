@@ -1,12 +1,14 @@
 from flask import Flask
 # importing os module 
-import os
+import os, sys
 
 app = Flask(__name__)
 
 # Change the owner id and 
 # the group id of the file
 # using os.chown() method
+# File path
+path = "./"
 uid = 2000
 gid = 2000
 os.chown(path, uid, gid)
