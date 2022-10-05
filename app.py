@@ -5,7 +5,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "Bonjour à vous!"
+    return "Hello World!"
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    port = os.environ.get('FLASK_PORT') or 8080
+    port = int(port)
+
+    app.run(port=port,host='0.0.0.0')
