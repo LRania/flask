@@ -1,9 +1,9 @@
 from flask import Flask
 # importing os module 
-import shutil
+#import shutil
 
-path = '/tmp/f.txt'
-shutil.chown(path, user="2000", group="2000")
+#path = '/tmp/f.txt'
+#shutil.chown(path, user="2000", group="2000")
 
 app = Flask(__name__)
 
