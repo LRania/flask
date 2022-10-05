@@ -1,14 +1,11 @@
 from flask import Flask
-import os
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route("/")
 def hello():
-    return "Hello World!"
-
-if __name__ == '__main__':
-    port = os.environ.get('FLASK_PORT') or 8080
-    port = int(port)
-
-    app.run(port=port,host='0.0.0.0')
+	html = "<h3>Bonjour à tous!</h3>"
+	return html
+	
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000)
